@@ -17,7 +17,7 @@ app.get('/', (request, response) => {
 	return response.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/recipe', (request, response) => {
+app.get('/recipes', (request, response) => {
 	recipeName = request.query.recipe;
 	console.log(recipeName);
 

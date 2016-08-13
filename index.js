@@ -17,4 +17,17 @@ app.get('/', (request, response) => {
 	return response.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/recipe', (request, response) => {
+	recipeName = request.query.recipe;
+
+	db.collection('recipes').find({"name": recipeName}).toArray((err, recipeArr) => {
+		if (err) 
+			return response.send({"error": "Error in finding recipe"});
+		if (recipeArr.length == 0) {
+			return response.send({"error": "Recipe doesn't exist"});
+		}
+		return response.send(recipeArr[0]);
+	});
+});
+
 app.listen(process.env.PORT || 3000);

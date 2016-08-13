@@ -18,8 +18,11 @@ app.get('/', (request, response) => {
 });
 
 app.get('/recipes', (request, response) => {
+	// allow cross-origin resource sharing
+	response.header("Access-Control-Allow-Origin", "*");
+	response.header("Access-Control-Allow-Headers", "X-Requested-With");
+	
 	recipeName = request.query.recipe;
-	console.log(recipeName);
 
 	db.collection('recipes').find({"name": recipeName}).toArray((err, recipeArr) => {
 		if (err) 

@@ -44,7 +44,7 @@ function voiceDev() {
     recognition.maxAlternatives = 1;
 
     var start = new SpeechSynthesisUtterance("Are you ready");
-    start.rate = 1.3;
+    start.rate = 0.8;
     window.speechSynthesis.speak(start);
     start.onend = function(event) {
       recognition.start();

@@ -1,9 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Recipio</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" href = "recipie.css">
+<script src="recipie.js"></script>
+
 </head>
 <body>
-Hi
+
+<div class="jumbotron text-center" style="height: 150px;">
+  <h1 id="header">Voice Your Recipie</h1>
+
+</div>
+<div class="fluid" id = "navbar_header">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="recipie.html">Recipe.io</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Category</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Favourite Dishes <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="omlette.html">Omlette</a></li>
+            <li><a href="#">Hamburger</a></li>
+            <li><a href="#">Beef Buritto</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Italian Pizza</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Thai Jasmine</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Recipe">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Welcome</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jacob <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+
+            <li><a href="#">Profile</a></li>
+            <li class="divider"></li>
+            <li><a href="#">jacob@gmail.com</a></li>
+            <li><a href="#">+1 617 870 8657</a></li>
+            <li><a href="#">Boston, MA</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+<div class="container">
+<!-- row 1-->
+  <div class="row">
+    <div class="col-sm-4" id = "img1">
+      <img src = "Images/baked-stuffed-lobster-1.jpg" />
+      <h3>Baked Stuffted lobster</h3>
+
+    </div>
+    <div class="col-sm-4" id = "img2">
+      <img src = "Images/beef-burrito.jpg" />
+      <h3>Beef-Burrito</h3>
+
+    </div>
+    <div class="col-sm-4" id = "img3">
+      <img src = "Images/cropped-french_macarons.jpg" />
+      <h3>Cropped French Macarons</h3>
+
+    </div>
+  </div>
+<!-- row 2-->
+  <div class="row">
+    <div class="col-sm-4" id="img4">
+      <img src = "Images/omlette.jpg" />
+      <h3>Omlette</h3>
+
+    </div>
+    <div class="col-sm-4" id = "img5">
+      <img src = "Images/italian.jpg" />
+      <h3>Italian Pizza</h3>
+
+    </div>
+    <div class="col-sm-4" id = "img6">
+      <img src = "Images/rainbow.jpg" />
+      <h3>Rainbow Salad</h3>
+
+    </div>
+  </div>
+
+  <!-- row 3-->
+    <div class="row">
+      <div class="col-sm-4" id = "img7">
+        <img src = "Images/thai.jpg" />
+        <h3>Thai Jasmine</h3>
+
+      </div>
+      <div class="col-sm-4" id = "img8">
+        <img src = "Images/ham.jpg" />
+        <h3>Hamburger</h3>
+
+      </div>
+      <div class="col-sm-4" id = "img9">
+        <img src = "Images/slide.jpg" />
+        <h3>Slide cheese</h3>
+
+      </div>
+    </div>
+
+</div>
+
+
+<div class="col-md-6" id="contentRecog">
+    <div class="row">
+      <div class="allowM">
+          <button type="button" class="btn btn-primary" onclick="voiceDev()"><img id="allowChat" src="chat.png" height="30px" width="40px" />Allow Access to
+              the Microphone
+          </button>
+      </div>
+      <div class="disableM">
+          <button type="button" class="btn btn-primary" id = "disable"><img id="notallowChat" src="chat.png" height="30px" width="40px" />Stop Accessing the Microphone</button>
+      </div>
+    </div>
+</div>
 </body>
 </html>

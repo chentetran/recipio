@@ -16,3 +16,5 @@ var db = MongoClient.connect(mongoUri, function(error, databaseConnection) {
 app.get('/', (request, response) => {
 	return response.sendFile(__dirname + '/public/index.html');
 });
+
+app.listen(process.env.PORT || 3000);

@@ -87,7 +87,7 @@ function voiceDev() {
             message = msg.steps;
             console.log(result[0].transcript);
             var utterance = new SpeechSynthesisUtterance(message[nextvalue]);
-            utterance.rate = 1.3;
+            utterance.rate = 0.8;
             starting.innerHTML = message[nextvalue];
             window.speechSynthesis.speak(utterance);
 
@@ -103,7 +103,7 @@ function voiceDev() {
           console.log(result[0].transcript);
           nextvalue++;
           var utteranceNext = new SpeechSynthesisUtterance(message[nextvalue]);
-          utteranceNext.rate = 1.3;
+          utteranceNext.rate = 0.8;
           starting.innerHTML = message[nextvalue];
           window.speechSynthesis.speak(utteranceNext);
 
@@ -112,7 +112,7 @@ function voiceDev() {
           };
         } else {
           var lastStep = new SpeechSynthesisUtterance("That was the last step");
-          lastStep.rate = 1.3;
+          lastStep.rate = 0.8;
           starting.innerHTML = "That was the last step";
           window.speechSynthesis.speak(lastStep);
 
@@ -127,7 +127,7 @@ function voiceDev() {
           nextvalue--;
           console.log(result[0].transcript);
           var utterancePrevious = new SpeechSynthesisUtterance(message[nextvalue]);
-          utterancePrevious.rate = 1.3;
+          utterancePrevious.rate = 0.8;
           starting.innerHTML = message[nextvalue];
           window.speechSynthesis.speak(utterancePrevious);
 
@@ -136,7 +136,7 @@ function voiceDev() {
           };
         } else {
           var firstStep = new SpeechSynthesisUtterance("That was the first step");
-          firstStep.rate = 1.3;
+          firstStep.rate = 0.8;
           starting.innerHTML = "That was the first step";
           window.speechSynthesis.speak(firstStep);
 
@@ -149,7 +149,7 @@ function voiceDev() {
       } else if (result[0].transcript.includes('repeat') || result[0].transcript.includes('Repeat')) {
         console.log(result[0].transcript);
         var utteranceRepeat = new SpeechSynthesisUtterance(message[nextvalue]);
-        utteranceRepeat.rate = 1.3;
+        utteranceRepeat.rate = 0.8;
         starting.innerHTML = message[nextvalue];
         window.speechSynthesis.speak(utteranceRepeat);
 
@@ -161,7 +161,7 @@ function voiceDev() {
         console.log(result[0].transcript);
         var stop = "Thank you! Have a Great Day";
         var stop1 = new SpeechSynthesisUtterance(stop);
-        stop1.rate = 1.3;
+        stop1.rate = 0.8;
         starting.innerHTML = stop;
         window.speechSynthesis.speak(stop1);
 
@@ -179,7 +179,7 @@ function voiceDev() {
         console.log(result[0].transcript);
         recognition.stop();
         var sorry = new SpeechSynthesisUtterance("Sorry Can you repeat that again");
-        sorry.rate = 1.3;
+        sorry.rate = 0.8;
         starting.innerHTML = "Sorry Can you repeat that again";
         window.speechSynthesis.speak(sorry);
         sorry.onend = function(event) {

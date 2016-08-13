@@ -19,6 +19,7 @@ app.get('/', (request, response) => {
 
 app.get('/recipe', (request, response) => {
 	recipeName = request.query.recipe;
+	console.log(recipeName);
 
 	db.collection('recipes').find({"name": recipeName}).toArray((err, recipeArr) => {
 		if (err) 
